@@ -115,7 +115,7 @@ unsafe fn trace_process(pid: i32) {
                         ptrace_syscall(
                             pid,
                             PtraceRequest::PeekData,
-                            (regs.rsi + shift) as *mut () as *mut (),
+                            (regs.rsi + shift) as *mut (),
                             &mut data as *mut _ as *mut (),
                         );
                         data as char
